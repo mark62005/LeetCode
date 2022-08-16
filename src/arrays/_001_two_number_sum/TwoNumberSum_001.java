@@ -1,4 +1,4 @@
-package arrays;
+package arrays._001_two_number_sum;
 
 import java.util.*;
 
