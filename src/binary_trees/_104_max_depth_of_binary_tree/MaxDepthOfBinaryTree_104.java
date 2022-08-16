@@ -3,6 +3,7 @@ package binary_trees._104_max_depth_of_binary_tree;
 import utils.TreeNode;
 
 public class MaxDepthOfBinaryTree_104 {
+    // Time: O(N), Space: O(N)
     public static int maxDepth(TreeNode root) {
         // base case
         if (root == null) {
