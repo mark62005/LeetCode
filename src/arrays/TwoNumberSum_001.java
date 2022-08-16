@@ -1,21 +1,21 @@
 package arrays;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class TwoNumberSum_001 {
     // time: O(N), Space: O(N)
     public static int[] twoSum(int[] nums, int target) {
-        Set<Integer> numsSet = new HashSet<>();
-        for (int num : nums) {
-            int match = target - num;
-            if (numsSet.contains(match)) {
-                return new int[] {match, num};
+        int[] result = new int[2];
+        Map<Integer, Integer> numsMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (numsMap.containsKey(target - nums[i])) {
+                result[1] = i;
+                result[0] = numsMap.get(target - nums[i]);
+                return result;
             }
-            numsSet.add(num);
+            numsMap.put(nums[i], i);
         }
-        return new int[0];
+        return result;
     }
 
     public static void main(String[] args) {
