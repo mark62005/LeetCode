@@ -4,16 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpiralMatrix_054 {
+    // Time: O(M*N), Space: O(1)
     public static List<Integer> spiralOrder(int[][] matrix) {
-        if (matrix == null) {
-            throw new IllegalArgumentException("Input is invalid");
-        }
-
         List<Integer> result = new ArrayList<>();
-        if (matrix.length == 0 || matrix[0].length == 0) {
-            return result;
-        }
-
         int top = 0;
         int bottom = matrix.length - 1;
         int left = 0;
